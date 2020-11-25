@@ -1,2 +1,3 @@
-# reviewdog-action-ember-template-lint
-Reviewdog action for Ember Template Lint
+# action-template
+
+Reviewdog action for [Ember Template Lint](https://github.com/ember-template-lint/ember-template-lint)
