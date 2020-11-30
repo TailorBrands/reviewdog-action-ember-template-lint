@@ -12,7 +12,7 @@ fi
 
 "$(npm bin)"/ember-template-lint --version
 
-DISABLE_GITHUB_ACTIONS_ANNOTATIONS=true "$(npm bin)"/ember-template-lint --json ${INPUT_TEMPLATE_LINT_FLAGS:-'.'} > /ember-template-lint-output.json
+DISABLE_GITHUB_ACTIONS_ANNOTATIONS=true "$(npm bin)"/ember-template-lint --json "${INPUT_TEMPLATE_LINT_FLAGS:-'.'}" > /ember-template-lint-output.json
 
 cat /ember-template-lint-output | node /formatter.js > /rdjson-ember-template-lint-output.json
 
@@ -22,4 +22,4 @@ cat /rdjson-ember-template-lint-output | reviewdog -f=rdjson \
   -filter-mode="${INPUT_FILTER_MODE}" \
   -fail-on-error="${INPUT_FAIL_ON_ERROR}" \
   -level="${INPUT_LEVEL}" \
-  ${INPUT_REVIEWDOG_FLAGS}
+  "${INPUT_REVIEWDOG_FLAGS}"
