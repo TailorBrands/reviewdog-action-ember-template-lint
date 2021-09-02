@@ -1,6 +1,6 @@
-FROM node:current-alpine
+FROM node:16-alpine3.11
 
-ENV REVIEWDOG_VERSION=v0.11.0
+ENV REVIEWDOG_VERSION=v0.13.0
 
 RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ ${REVIEWDOG_VERSION}
 
