@@ -9,7 +9,7 @@ jobs:
     name: licensing_node
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - uses: actions/setup-node@v2
       - uses: actions/cache@v2
         with:
@@ -23,6 +23,7 @@ jobs:
         with:
           version: "3.x"
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      - run: licensed cache
       - uses: jonabc/licensed-ci@v1
         with:
           workflow: branch
