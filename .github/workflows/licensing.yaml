@@ -23,7 +23,6 @@ jobs:
         with:
           version: "3.x"
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - run: licensed cache
       - uses: jonabc/licensed-ci@v1
         with:
           workflow: branch
