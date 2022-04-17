@@ -16,6 +16,6 @@
   },
   "homepage": "https://github.com/selfish/reviewdog-ember-template-lint#readme",
   "devDependencies": {
-    "ember-template-lint": "2.14.0"
+    "ember-template-lint": "4.4.1"
   }
 }
